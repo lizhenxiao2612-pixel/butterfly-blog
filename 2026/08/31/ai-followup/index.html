@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>比一次写完美更重要：怎么跟 AI 追问 | Butterfly Blog</title><meta name="author" content="Author"><meta name="copyright" content="Author"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="同一轮对话里连续追问，比反复新开窗口、每次重写长提示更有效。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="比一次写完美更重要：怎么跟 AI 追问">
+<meta property="og:url" content="https://lizhenxiao2612-pixel.github.io/butterfly-blog/2026/08/31/ai-followup/index.html">
+<meta property="og:site_name" content="Butterfly Blog">
+<meta property="og:description" content="同一轮对话里连续追问，比反复新开窗口、每次重写长提示更有效。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lizhenxiao2612-pixel.github.io/butterfly-blog/img/cover-followup.png">
+<meta property="article:published_time" content="2026-08-31T08:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-31T07:39:45.616Z">
+<meta property="article:author" content="Author">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="入门">
+<meta property="article:tag" content="对话">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lizhenxiao2612-pixel.github.io/butterfly-blog/img/cover-followup.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "比一次写完美更重要：怎么跟 AI 追问",
+  "url": "https://lizhenxiao2612-pixel.github.io/butterfly-blog/2026/08/31/ai-followup/",
+  "image": "https://lizhenxiao2612-pixel.github.io/butterfly-blog/img/cover-followup.png",
+  "datePublished": "2026-08-31T08:00:00.000Z",
+  "dateModified": "2026-08-31T07:39:45.616Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Author",
+      "url": "https://lizhenxiao2612-pixel.github.io/butterfly-blog"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/butterfly-blog/img/favicon.png"><link rel="canonical" href="https://lizhenxiao2612-pixel.github.io/butterfly-blog/2026/08/31/ai-followup/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/butterfly-blog/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/butterfly-blog/',
+  algolia: undefined,
+  localSearch: {"path":"/butterfly-blog/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '比一次写完美更重要：怎么跟 AI 追问',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/butterfly-blog/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/butterfly-blog/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/butterfly-blog/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/butterfly-blog/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/butterfly-blog/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/butterfly-blog/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/butterfly-blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/butterfly-blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/butterfly-blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/butterfly-blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/butterfly-blog/img/cover-followup.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/butterfly-blog/"><span class="site-name">Butterfly Blog</span></a><a class="nav-page-title" href="/butterfly-blog/"><span class="site-name">比一次写完美更重要：怎么跟 AI 追问</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/butterfly-blog/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/butterfly-blog/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/butterfly-blog/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/butterfly-blog/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/butterfly-blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">比一次写完美更重要：怎么跟 AI 追问</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-08-31T08:00:00.000Z" title="发表于 2026-08-31 16:00:00">2026-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-08-31T07:39:45.616Z" title="更新于 2026-08-31 15:39:45">2026-08-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/butterfly-blog/categories/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-AI/">如何使用 AI</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/butterfly-blog/2026/08/31/ai-followup/#post-comment"><span class="waline-comment-count" data-path="/butterfly-blog/2026/08/31/ai-followup/"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>新手常会把第一句写得很长，不满意就新开一个窗口重来。其实多数好结果来自<strong>同一段对话里的第二、第三句</strong>：缩小范围、换例子、砍掉废话。</p>
+<p><img src="/img/illust-followup.png" alt="一轮一轮问清楚，答案会越来越亮"></p>
+<h2 id="先拿一版「能用但不完美」的"><a href="#先拿一版「能用但不完美」的" class="headerlink" title="先拿一版「能用但不完美」的"></a>先拿一版「能用但不完美」的</h2><p>第一句只负责开工，例如：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请用大白话解释什么是 Prompt。</span><br><span class="line">给完全没写过提示词的人看。</span><br><span class="line">先写 300 字左右。</span><br></pre></td></tr></table></figure>
+
+<p>有初稿后，再用短指令修，而不是推翻重写。</p>
+<h2 id="七句特别好用的追问"><a href="#七句特别好用的追问" class="headerlink" title="七句特别好用的追问"></a>七句特别好用的追问</h2><p>复制改几个字就能接着用：</p>
+<ol>
+<li>「只保留对我有用的部分，删掉开场白。」</li>
+<li>「第二段我看不懂，只重写那一段，举一个买菜的例子。」</li>
+<li>「改成逐步清单，每步一个祈使句。」</li>
+<li>「语气改成我在教同事，不要营销腔。」</li>
+<li>「把假设改成：读者一周只用一次 AI。」</li>
+<li>「给出两个版本：一个更短，一个更细。先不要合并。」</li>
+<li>「我更在意 X 而不是 Y。按这个优先级再改一版。」</li>
+</ol>
+<h2 id="它跑偏了怎么办"><a href="#它跑偏了怎么办" class="headerlink" title="它跑偏了怎么办"></a>它跑偏了怎么办</h2><p>直接指出来，比礼貌地说「再优化」更有效：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">你刚才加入了我没要求的「注册账号教程」。</span><br><span class="line">请删掉这部分，只谈怎么提问。</span><br><span class="line">其它段落可以不动。</span><br></pre></td></tr></table></figure>
+
+<p>需要它记住你的偏好时，说一次即可：「后面都用这个格式：先结论，再步骤，最后注意事项。」同一窗口里它通常能跟上。</p>
+<h2 id="什么时候该新开对话"><a href="#什么时候该新开对话" class="headerlink" title="什么时候该新开对话"></a>什么时候该新开对话</h2><ul>
+<li>主题已经换成另一件事</li>
+<li>它开始把旧要求和新年混在一起</li>
+<li>你要贴一份全新的长材料</li>
+</ul>
+<p>换窗口后，用两句话把旧结论带走：「我们刚才定了用清单格式。现在请按同样格式处理下面这份新材料。」</p>
+<p>入门可以按这个顺序看：<a href="/2026/08/31/ai-first-chat/">开口第一句</a> → <a href="/2026/08/31/ai-daily-uses/">日常五个场景</a> → <a href="/2026/08/31/ai-factcheck/">怎么核对对错</a> → 本篇追问。写提示词的骨架仍在 <a href="/2026/08/28/ai-prompt-guide/">如何写出能用的 AI 提示词</a>。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://lizhenxiao2612-pixel.github.io/butterfly-blog">Author</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://lizhenxiao2612-pixel.github.io/butterfly-blog/2026/08/31/ai-followup/">https://lizhenxiao2612-pixel.github.io/butterfly-blog/2026/08/31/ai-followup/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://lizhenxiao2612-pixel.github.io/butterfly-blog" target="_blank">Butterfly Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/butterfly-blog/tags/AI/">AI</a><a class="post-meta__tags" href="/butterfly-blog/tags/%E5%85%A5%E9%97%A8/">入门</a><a class="post-meta__tags" href="/butterfly-blog/tags/%E5%AF%B9%E8%AF%9D/">对话</a></div><div class="post-share"><div class="social-share" data-image="/butterfly-blog/img/cover-followup.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/butterfly-blog/2026/08/31/ai-factcheck/" title="AI 会说错：新手怎么核对答案"><img class="cover" src="/butterfly-blog/img/cover-factcheck.png" onerror="onerror=null;src='/butterfly-blog/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">AI 会说错：新手怎么核对答案</div></div><div class="info-2"><div class="info-item-1">AI 最容易让新手放松警惕的地方，是它永远很自信。句子通顺、条理清楚，不代表事实成立。把它当草稿，不当百科。  哪些输出最该怀疑   类型 为什么容易错 你怎么做    具体数字、日期、价格 容易编得像真的 打开官网或原始公告核对   链接、论文名、书名 可能根本不存在 自己搜一遍标题   「某某说过」 常张冠李戴 搜原话或放弃引用   法律、医疗、税务 错一次代价大 只当预习，决策问人   写代码、改配置也一样：能跑不等于做对了。你要看它改了什么，而不是只看「好像没报错」。 让它自己暴露不确定可以在提问末尾加上： 123不确定的地方请明确写「我不确定」，不要编出处。如果需要假设，先列出假设再回答。涉及数字时，请说明这个数字可能过时。  如果它仍然写得斩钉截铁，你就当没这条约束——用搜索引擎或官网再问一次「这是不是真的」。 一个 30 秒核对法 抽出它给出的最硬的一句（带数字、人名或链接的那句）。 用搜索引擎搜这句的关键词，看有没有独立来源。 对不上，就让 AI 重来，并贴上你查到的原文：  12我查到的原文是下面这段。请根据这段重写，不要保留你刚才编的数字。（贴上你找到的材料）...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/butterfly-blog/2026/08/31/ai-daily-uses/" title="新手最值得用的 5 个 AI 日常场景"><img class="cover" src="/butterfly-blog/img/cover-daily.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-31</div><div class="info-item-2">新手最值得用的 5 个 AI 日常场景</div></div><div class="info-2"><div class="info-item-1">还不会写复杂提示词也没关系。下面五个场景，复制后改几个词就能用。目标不是「让 AI 替你生活」，而是先把重复、卡壳的小事变快。  1. 总结一篇太长的东西12345678请用中文总结下面内容。给完全没读过原文的人看。结构：- 这是在讲什么（2 句）- 3 个要点- 1 个我可能误解的地方原文如下：（贴上文章或会议记录）  适合：长文章、会议纪要、产品说明。 2. 翻译，但保留你的口气123把下面译成通顺的中文。不要逐词死译。专有名词保留英文，并在第一次出现时用括号补中文。语气保持口语，像我在跟同事说话。  反过来也行：中文改英文邮件时，加上「请用礼貌但简短的商务英文，不要华丽形容词」。 3. 改一封发不出去的邮件12345这是我的草稿，请改得更清楚、更礼貌。不要改变事实，不要替我承诺新的日期或金额。输出两版：一版正式，一版更短。草稿：（贴上）  4. 把脑子里的一团乱列成计划12345我想做这件事：周末写完一篇「如何使用 AI」的博客。我只有星期六下午 3 小时。请拆成按时间排序的步骤，每步不超过 25 分钟。标出哪一步可以跳过。先问我 2 个问题，再给计划。  最后一句很关键：...</div></div></div></a><a class="pagination-related" href="/butterfly-blog/2026/08/31/ai-first-chat/" title="第一次用 AI：开口第一句怎么说"><img class="cover" src="/butterfly-blog/img/cover-first-chat.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-31</div><div class="info-item-2">第一次用 AI：开口第一句怎么说</div></div><div class="info-2"><div class="info-item-1">刚打开对话框，最常见的卡点不是「不会写 Prompt」，而是不知道第一句该打什么。可以把它当成一个听得懂人话、但需要你把背景讲清楚的同事。  最小可用的第一句不用一次写很长。这三样齐了就能开始：  你是谁 &#x2F; 你在做什么 你卡在哪一步 你希望它交什么东西回来  可以整句复制改： 1234我刚开始用 AI，请用大白话回答。我在学怎么写博客，现在卡在「不知道第一篇写什么」。请给我 5 个适合新手的题目，每个题目用一句话说明为什么值得写。不要鸡汤，不要空泛建议。  三种很好用的问法解释：「用中学生能懂的话解释什么是大模型。先给一个比喻，再给一个生活例子。」 起草：「帮我把下面这段口语，改成一封 150 字的礼貌邮件。保持原意，不要加新承诺。」 选择：「我在 A 和 B 里犹豫。请各列 3 个优点和 3 个风险，最后问我一个关键问题，帮我做决定。先不要替我选。」 它回完之后你做什么第一轮很少一次到位。你可以接着说：  「再短一半。」 「例子换成上班通勤的场景。」 「刚才第二点我看不懂，只展开那一点。」  这比把第一句写到完美更重要。下一篇会专门讲怎么追问。 别急着贴进去的东西密...</div></div></div></a><a class="pagination-related" href="/butterfly-blog/2026/08/31/ai-factcheck/" title="AI 会说错：新手怎么核对答案"><img class="cover" src="/butterfly-blog/img/cover-factcheck.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-31</div><div class="info-item-2">AI 会说错：新手怎么核对答案</div></div><div class="info-2"><div class="info-item-1">AI 最容易让新手放松警惕的地方，是它永远很自信。句子通顺、条理清楚，不代表事实成立。把它当草稿，不当百科。  哪些输出最该怀疑   类型 为什么容易错 你怎么做    具体数字、日期、价格 容易编得像真的 打开官网或原始公告核对   链接、论文名、书名 可能根本不存在 自己搜一遍标题   「某某说过」 常张冠李戴 搜原话或放弃引用   法律、医疗、税务 错一次代价大 只当预习，决策问人   写代码、改配置也一样：能跑不等于做对了。你要看它改了什么，而不是只看「好像没报错」。 让它自己暴露不确定可以在提问末尾加上： 123不确定的地方请明确写「我不确定」，不要编出处。如果需要假设，先列出假设再回答。涉及数字时，请说明这个数字可能过时。  如果它仍然写得斩钉截铁，你就当没这条约束——用搜索引擎或官网再问一次「这是不是真的」。 一个 30 秒核对法 抽出它给出的最硬的一句（带数字、人名或链接的那句）。 用搜索引擎搜这句的关键词，看有没有独立来源。 对不上，就让 AI 重来，并贴上你查到的原文：  12我查到的原文是下面这段。请根据这段重写，不要保留你刚才编的数字。（贴上你找到的材料）...</div></div></div></a><a class="pagination-related" href="/butterfly-blog/2026/08/28/ai-code-assistant/" title="把 AI 当成结对编程的同事"><img class="cover" src="/butterfly-blog/img/cover-code.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-28</div><div class="info-item-2">把 AI 当成结对编程的同事</div></div><div class="info-2"><div class="info-item-1">写代码时，最常见的失败方式是：把半个文件贴进去，说「修一下」。模型看不见项目约定，就会另起炉灶。把它当成坐在旁边的同事：先讲现场，再请它动手。  修 bug 时带上这四样 现象：实际发生了什么，期望是什么。 复现：最短步骤，最好能复制。 现场：相关函数或报错栈，而不是整个仓库。 边界：哪些文件不能动、风格要跟哪段现有代码。  12345Python 3.12，函数 `parse_tags(raw: str) -&gt; list[str]`。输入 `&quot;hexo, ai&quot;` 时我希望得到 [&quot;hexo&quot;, &quot;ai&quot;]，现在空格还留在结果里。请只改这一函数，补一个最小单测。不要引入新依赖。  让它解释，而不是先改面对看不懂的报错，先要解释路径，再允许改代码： 123先不要改代码。用我能读懂的话说明：错误在哪一层发生、为什么会触发。如果有两种可能原因，先列出来，问我要哪条路。  这能避免「看起来能跑、其实换了一种坏法」的补丁。 适合交给 AI 的，和不适合的适合： 写样例、补测试、翻译报错、对照文档、把重复样板收成函数。 你自...</div></div></div></a><a class="pagination-related" href="/butterfly-blog/2026/08/28/ai-write-blog/" title="用 AI 写博客：从提纲到发布"><img class="cover" src="/butterfly-blog/img/cover-blog.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-28</div><div class="info-item-2">用 AI 写博客：从提纲到发布</div></div><div class="info-2"><div class="info-item-1">把整篇博客丢给 AI「一键生成」，读起来会像说明书。更稳的用法是：你定方向，它帮你铺路，你再把句子改回自己的口气。  推荐流程 你写 5 行意图：读者是谁、他们卡在哪、读完能做什么。 让 AI 出提纲：只要标题和小节，不要正文。 你改提纲：删掉正确但无聊的节，补上你真正想讲的例子。 按节生成：一次只生成一节，避免全文口气漂走。 你通读一遍：删套话、补失败经历、把「众所周知」全部划掉。  给提纲用的提示： 1234读者：刚搭好 Hexo 博客、想开始写技术笔记的人。主题：如何用 AI 辅助写博客，而不是让 AI 代写。请给出 5 个小节标题，每个标题下一句说明这一节解决什么问题。不要写正文，不要鸡汤。  让它改，而不是重写有初稿之后，指定修改维度，比「润色一下」有用得多： 12345下面是我的草稿。请只做三件事：1. 删重复句；2. 把抽象形容词换成可以执行的步骤；3. 保持我的口语，不要改成正式公文。不要增加新观点。  配图和封面Butterfly 文章可以在 front-matter 里写 cover 和 top_img。插图用相对站点根路径，例如： 1![说明文字](/img...</div></div></div></a><a class="pagination-related" href="/butterfly-blog/2026/08/28/ai-prompt-guide/" title="如何写出能用的 AI 提示词"><img class="cover" src="/butterfly-blog/img/cover-prompt.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-08-28</div><div class="info-item-2">如何写出能用的 AI 提示词</div></div><div class="info-2"><div class="info-item-1">AI 不是读心术。你给它一句「帮我写一下」，它只能猜；你给它角色、目标、读者和验收标准，它才能交作业。  一条提示词至少要有四块   块 写什么 反例    角色 你希望它以什么身份回答 「你是一个 AI」   任务 具体产出物，而不是心情 「写得好一点」   约束 篇幅、语气、不能做什么 完全不提   验收 怎样算完成 「看着舒服就行」   可以套这个骨架： 12345你是一位给非技术读者写教程的编辑。请写一篇 800 字左右的短文，解释什么是 Prompt。读者是第一次用 AI 的上班族。不要堆术语；每节用一个生活例子。最后用 3 条 checklist 收尾，方便读者对照自己的提示词。  差提示 vs 好提示差：「帮我优化这段代码。」 好： 1234你是熟悉 Python 3.12 的同事。下面函数会在空列表时抛异常，请修掉，并保持函数签名不变。只改这一处，不要重构其它逻辑。修好后用 5 行以内说明原因。  前者让模型自由发挥，后者把「改哪里、不能动什么、怎么交差」都钉死了。 让它先问再写如果你自己也说不清需求，与其硬写长提示，不如先让模型采访你： 123先不要直接给答案。...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/butterfly-blog/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/butterfly-blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Author</div><div class="author-info-description">基于 Hexo + Butterfly 的个人博客</div><div class="site-data"><a href="/butterfly-blog/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/butterfly-blog/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/butterfly-blog/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E6%8B%BF%E4%B8%80%E7%89%88%E3%80%8C%E8%83%BD%E7%94%A8%E4%BD%86%E4%B8%8D%E5%AE%8C%E7%BE%8E%E3%80%8D%E7%9A%84"><span class="toc-number">1.</span> <span class="toc-text">先拿一版「能用但不完美」的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E5%8F%A5%E7%89%B9%E5%88%AB%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BF%BD%E9%97%AE"><span class="toc-number">2.</span> <span class="toc-text">七句特别好用的追问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%83%E8%B7%91%E5%81%8F%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E"><span class="toc-number">3.</span> <span class="toc-text">它跑偏了怎么办</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E6%96%B0%E5%BC%80%E5%AF%B9%E8%AF%9D"><span class="toc-number">4.</span> <span class="toc-text">什么时候该新开对话</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/butterfly-blog/2026/08/31/ai-followup/" title="比一次写完美更重要：怎么跟 AI 追问"><img src="/butterfly-blog/img/cover-followup.png" onerror="this.onerror=null;this.src='/butterfly-blog/img/404.jpg'" alt="比一次写完美更重要：怎么跟 AI 追问"/></a><div class="content"><a class="title" href="/butterfly-blog/2026/08/31/ai-followup/" title="比一次写完美更重要：怎么跟 AI 追问">比一次写完美更重要：怎么跟 AI 追问</a><time datetime="2026-08-31T08:00:00.000Z" title="发表于 2026-08-31 16:00:00">2026-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/butterfly-blog/2026/08/31/ai-factcheck/" title="AI 会说错：新手怎么核对答案"><img src="/butterfly-blog/img/cover-factcheck.png" onerror="this.onerror=null;this.src='/butterfly-blog/img/404.jpg'" alt="AI 会说错：新手怎么核对答案"/></a><div class="content"><a class="title" href="/butterfly-blog/2026/08/31/ai-factcheck/" title="AI 会说错：新手怎么核对答案">AI 会说错：新手怎么核对答案</a><time datetime="2026-08-31T07:50:00.000Z" title="发表于 2026-08-31 15:50:00">2026-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/butterfly-blog/2026/08/31/ai-daily-uses/" title="新手最值得用的 5 个 AI 日常场景"><img src="/butterfly-blog/img/cover-daily.png" onerror="this.onerror=null;this.src='/butterfly-blog/img/404.jpg'" alt="新手最值得用的 5 个 AI 日常场景"/></a><div class="content"><a class="title" href="/butterfly-blog/2026/08/31/ai-daily-uses/" title="新手最值得用的 5 个 AI 日常场景">新手最值得用的 5 个 AI 日常场景</a><time datetime="2026-08-31T07:40:00.000Z" title="发表于 2026-08-31 15:40:00">2026-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/butterfly-blog/2026/08/31/ai-first-chat/" title="第一次用 AI：开口第一句怎么说"><img src="/butterfly-blog/img/cover-first-chat.png" onerror="this.onerror=null;this.src='/butterfly-blog/img/404.jpg'" alt="第一次用 AI：开口第一句怎么说"/></a><div class="content"><a class="title" href="/butterfly-blog/2026/08/31/ai-first-chat/" title="第一次用 AI：开口第一句怎么说">第一次用 AI：开口第一句怎么说</a><time datetime="2026-08-31T07:30:00.000Z" title="发表于 2026-08-31 15:30:00">2026-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/butterfly-blog/2026/08/28/ai-code-assistant/" title="把 AI 当成结对编程的同事"><img src="/butterfly-blog/img/cover-code.png" onerror="this.onerror=null;this.src='/butterfly-blog/img/404.jpg'" alt="把 AI 当成结对编程的同事"/></a><div class="content"><a class="title" href="/butterfly-blog/2026/08/28/ai-code-assistant/" title="把 AI 当成结对编程的同事">把 AI 当成结对编程的同事</a><time datetime="2026-08-28T07:40:00.000Z" title="发表于 2026-08-28 15:40:00">2026-08-28</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By Author</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/butterfly-blog/js/utils.js?v=5.7.0"></script><script src="/butterfly-blog/js/main.js?v=5.7.0"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://YOUR-WALINE.vercel.app',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      comment: true,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.15.2/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client@3.15.2/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/butterfly-blog/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
