@@ -1,0 +1,37 @@
+# Butterfly 覆盖配置（其余项沿用主题默认，升级更省事）
+# 文档：https://butterfly.js.org/
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于: /about/ || fas fa-heart
+
+# 二次元站点背景
+index_img: /img/banner-home.png
+default_top_img: /img/banner-inner.png
+archive_img: /img/banner-inner.png
+tag_img: /img/banner-inner.png
+category_img: /img/banner-inner.png
+
+footer:
+  owner:
+    enable: true
+    since: 2026
+
+search:
+  use: local_search
+  placeholder: 搜索文章
+
+comments:
+  use: Waline
+  text: true
+  lazyload: false
+  count: true
+  card_post_count: false
+
+# 部署 Waline 服务后，把下面地址换成你的 Vercel 评论服务域名
+waline:
+  serverURL: https://YOUR-WALINE.vercel.app
+  pageview: false

@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm exec hexo generate",
+  "outputDirectory": "public",
+  "installCommand": "pnpm install",
+  "framework": null
+}
